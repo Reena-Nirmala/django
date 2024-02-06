@@ -240,7 +240,7 @@ def forgot_password(request):
             user.save()
 
             # Send the password reset email with the token
-            reset_link = f"http://127.0.0.1:8000/SummarEase/reset_password/{token}/"
+            reset_link = f"http://13.126.218.94:8081/SummarEase/reset_password/{token}/"
 
             send_mail(
                 'Reset Password',
