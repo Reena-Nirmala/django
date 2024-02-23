@@ -101,20 +101,35 @@ WSGI_APPLICATION = 'Text_app.wsgi.application'
 #         }
 # }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'djongo',
+#         'NAME': 'text_app',
+#         'CLIENT': {
+#             'host': os.environ.get('MONGO_URI', 'mongodb://admin:password@mongodb:27017/'),
+#             'port': 27017,
+#             'username': 'admin',
+#             'password': 'password',
+#             'authSource': 'admin',
+#         }
+#     }
+# }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'djongo',
-        'NAME': 'text_app',
-        'CLIENT': {
-            'host': os.environ.get('MONGO_URI', 'mongodb://admin:password@mongodb:27017/'),
-            'port': 27017,
-            'username': 'admin',
-            'password': 'password',
-            'authSource': 'admin',
-        }
+"default": {
+    "ENGINE": "djongo",
+    'ENFORCE_SCHEMA': False,
+    "NAME": "text_app",  # name of your DB which you want to access
+    "CLIENT": {
+        'host': 'mongodb+srv://django:1234@cluster0.vldruo8.mongodb.net/',  # your db_url if not hosted then localhost
+        'port': 27017,  # port e.g. 27017
+        'username': 'django',
+        'password': '1234',
+        'authSource': 'admin',  # set your db auth_source if you know
+        'authMechanism': 'SCRAM-SHA-1'  # set your auth_mechanism if you know
+ 
     }
 }
-
 # settings.py
 AUTH_USER_MODEL = 'login.User'
 
