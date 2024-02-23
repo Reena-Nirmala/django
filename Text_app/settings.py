@@ -88,18 +88,18 @@ WSGI_APPLICATION = 'Text_app.wsgi.application'
 #     }
 # }
 
-# DATABASES = {
-#         'default': {
-#             'ENGINE': 'djongo',
-#             'NAME': 'text_app',
-#             'ENFORCE_SCHEMA': False,
-#             'CLIENT': {
-#                 'host': 'mongodb+srv://django:1234@cluster0.vldruo8.mongodb.net/?retryWrites=true&w=majority',
-#                 # 'host': 'mongodb+srv://<username>:<password>@<atlas cluster>/<myFirstDatabase>?retryWrites=true&w=majority'
+DATABASES = {
+        'default': {
+            'ENGINE': 'djongo',
+            'NAME': 'text_app',
+            'ENFORCE_SCHEMA': False,
+            'CLIENT': {
+                'host': 'mongodb+srv://django:1234@cluster0.vldruo8.mongodb.net/?retryWrites=true&w=majority',
+                # 'host': 'mongodb+srv://<username>:<password>@<atlas cluster>/<myFirstDatabase>?retryWrites=true&w=majority'
 
-#             }  
-#         }
-# }
+            }  
+        }
+}
 
 # DATABASES = {
 #     'default': {
@@ -115,21 +115,21 @@ WSGI_APPLICATION = 'Text_app.wsgi.application'
 #     }
 # }
 
-DATABASES = {
-"default": {
-    "ENGINE": "djongo",
-    'ENFORCE_SCHEMA': False,
-    "NAME": "text_app",  # name of your DB which you want to access
-    "CLIENT": {
-        'host': 'mongodb+srv://django:1234@cluster0.vldruo8.mongodb.net/?retryWrites=true&w=majority',  # your db_url if not hosted then localhost
-        'port': 27017,  # port e.g. 27017
-        'username': 'django',
-        'password': '1234',
-         # set your db auth_source if you know
-        'authMechanism': 'SCRAM-SHA-1'  # set your auth_mechanism if you know
+# DATABASES = {
+# "default": {
+#     "ENGINE": "djongo",
+#     'ENFORCE_SCHEMA': False,
+#     "NAME": "text_app",  # name of your DB which you want to access
+#     "CLIENT": {
+#         'host': 'mongodb+srv://django:1234@cluster0.vldruo8.mongodb.net/?retryWrites=true&w=majority',  # your db_url if not hosted then localhost
+#         'port': 27017,  # port e.g. 27017
+#         'username': 'django',
+#         'password': '1234',
+#          # set your db auth_source if you know
+#         'authMechanism': 'SCRAM-SHA-1'  # set your auth_mechanism if you know
  
-    }
-}
+#     }
+# }
 # settings.py
 AUTH_USER_MODEL = 'login.User'
 
