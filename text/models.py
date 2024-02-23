@@ -6,7 +6,7 @@ from django.utils import timezone
 
 
 class TextSummary(models.Model):
-    # user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     input_text = models.TextField()
     generated_summary = models.TextField()
     user1 = models.IntegerField(default=0)
